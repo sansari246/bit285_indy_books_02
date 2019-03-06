@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Bogus;
 using IndyBooks.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -42,6 +43,8 @@ namespace IndyBooks
 
             //TODO : (4) Add the writers collection to the 
             await context.Books.AddRangeAsync(books);
+            await context.Writer.AddRangeAsync(writers);
+
 
             await context.SaveChangesAsync();
         }
