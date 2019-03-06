@@ -28,6 +28,7 @@ namespace IndyBooks.Controllers
             {
                 foundBooks = foundBooks
                  .Include(b => b.Author)
+                 ;
 
             }
             //Partial Title Search
